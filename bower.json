@@ -1,0 +1,32 @@
+{
+  "name": "bloombox-embedded-menu",
+  "description": "Provides UI for embeddable web menus",
+  "version": "0.0.1",
+  "private": true,
+  "authors": [
+    "Sam Gammon <sam@momentum.io>"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "bloombox",
+    "embed",
+    "public"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:bloombox/bloombox-embedded-menu.git"
+  },
+  "license": "Private, All Rights Reserved",
+  "homepage": "https://github.com/bloombox/bloombox-embedded-menu",
+  "main": "bloombox-embedded-menu.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.8.0",
+    "bloombox-styles": "Bloombox/bloombox-styles"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  }
+}
