@@ -21,7 +21,7 @@ gulp.task('serve', function () {
     }
   });
 
-  gulp.watch(['*.html', 'demo/*.html'], ['default', reload]);
+  gulp.watch(['*.html', 'demo/*.html', 'bloombox-embedded-menu.js'], ['default', reload]);
 });
 
 gulp.task('default', $.shell.task(['make quickbuild']));

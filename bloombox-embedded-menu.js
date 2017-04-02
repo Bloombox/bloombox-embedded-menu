@@ -2,7 +2,7 @@
 /**
  * `<bloombox-embedded-menu>`
  */
-var BloomboxEmbeddedMenu = Polymer.BloomboxEmbeddedMenu = Polymer({
+var BloomboxEmbeddedMenu = Polymer["BloomboxEmbeddedMenu"] = Polymer({
   is: 'bloombox-embedded-menu',
 
   properties: {
@@ -40,7 +40,7 @@ var BloomboxEmbeddedMenu = Polymer.BloomboxEmbeddedMenu = Polymer({
     }
   },
 
-  listeners: [
+  observers: [
     "_widgetReady(apikey, partner, location)"
   ],
 
@@ -53,6 +53,10 @@ var BloomboxEmbeddedMenu = Polymer.BloomboxEmbeddedMenu = Polymer({
    * @param {string} location Location ID to load menu for.
    */
   _widgetReady: function(apikey, partner, location) {
-    
+    console.info("[Embed:Component]: Loaded entrypoint configuration.", {
+      "apikey": apikey,
+      "partner": partner,
+      "location": location
+    });
   }
 });
