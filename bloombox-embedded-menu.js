@@ -2,14 +2,21 @@
 /**
  * `<bloombox-embedded-menu>`
  */
-var BloomboxEmbeddedMenu = Polymer["BloomboxEmbeddedMenu"] = Polymer({
+Polymer({
   is: 'bloombox-embedded-menu',
 
   properties: {
     /**
+     * Calculated menu data endpoint.
+     */
+    _dataEndpoint: {
+      type: String,
+      notify: true,
+      readOnly: true
+    },
+
+    /**
      * API key to authorize communications with the Bloombox APIs.
-     *
-     * @type {string}
      */
     apikey: {
       type: String,
@@ -19,8 +26,6 @@ var BloomboxEmbeddedMenu = Polymer["BloomboxEmbeddedMenu"] = Polymer({
 
     /**
      * Partner account ID we are displaying the menu for.
-     *
-     * @type {string}
      */
     partner: {
       type: String,
@@ -30,18 +35,26 @@ var BloomboxEmbeddedMenu = Polymer["BloomboxEmbeddedMenu"] = Polymer({
 
     /**
      * Location account ID we are displaying the menu for.
-     *
-     * @type {string}
      */
     location: {
       type: String,
       notify: true,
       reflectToAttribute: true
+    },
+
+    /**
+     * Specifies the display style of the menu.
+     */
+    menuStyle: {
+      type: String,
+      notify: true,
+      reflectToAttribute: true,
+      value: "MASTER_ONLY"
     }
   },
 
   observers: [
-    "_widgetReady(apikey, partner, location)"
+    "_widgetReady(apikey, partner, location, menuStyle)"
   ],
 
   /**
@@ -51,12 +64,20 @@ var BloomboxEmbeddedMenu = Polymer["BloomboxEmbeddedMenu"] = Polymer({
    * @param {string} apikey API key to use for underlying public auth.
    * @param {string} partner Partner account ID.
    * @param {string} location Location ID to load menu for.
+   * @param {string} menuStyle Style of the menu being rendered.
    */
-  _widgetReady: function(apikey, partner, location) {
-    console.info("[Embed:Component]: Loaded entrypoint configuration.", {
-      "apikey": apikey,
+  _widgetReady: function(apikey, partner, location, menuStyle) {
+    console.info("[Embed:Component]: Loaded entrypoint configuration.", this);
+
+    new RPC("embed", "view", {
       "partner": partner,
-      "location": location
+      "location": location,
+      "style": menuStyle,
+      "key": apikey
+    }).then(function(response) {
+      console.info("Embed RPC: ", err);
+    }, function(err) {
+      console.error("Embed RPC: ", err);
     });
   }
 });

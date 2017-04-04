@@ -22,7 +22,8 @@
   "main": "bloombox-embedded-menu.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.8.0",
-    "bloombox-styles": "Bloombox/bloombox-styles"
+    "iron-ajax": "PolymerElements/iron-ajax#^1.4.3",
+    "bloombox-product-list": "Bloombox/bloombox-product-list#^0.0.1"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

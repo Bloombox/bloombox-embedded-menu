@@ -28,6 +28,7 @@
     "del": "^0.1.2",
     "gulp": "^3.8.5",
     "gulp-load-plugins": "^0.5.3",
+    "google-closure-library": "^20161201.0.0",
     "gulp-shell": "^0.5.2",
     "gulp-util": "^3.0.4",
     "require-dir": "^0.1.0",
