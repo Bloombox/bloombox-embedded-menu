@@ -21,8 +21,7 @@
   "homepage": "https://github.com/bloombox/bloombox-embedded-menu",
   "main": "bloombox-embedded-menu.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.8.0",
-    "bloombox-product-list": "Bloombox/bloombox-product-list"
+    "polymer": "Polymer/polymer#^1.8.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

@@ -67,6 +67,7 @@ Polymer({
    * @param {string} menuStyle Style of the menu being rendered.
    */
   _widgetReady: function(apikey, partner, location, menuStyle) {
+    let RPC = window["RPC"];
     console.info("[Embed:Component]: Loaded entrypoint configuration.", this);
 
     new RPC("embed", "view", {
@@ -75,7 +76,7 @@ Polymer({
       "style": menuStyle,
       "key": apikey
     }).then(function(response) {
-      console.info("Embed RPC: ", err);
+      console.info("Embed RPC: ", response);
     }, function(err) {
       console.error("Embed RPC: ", err);
     });
