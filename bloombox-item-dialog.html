@@ -1,0 +1,33 @@
+
+<!--
+`<bloombox-embedded-menu>` provides publicly-accessible UI for rendering embedded
+menus on 2nd or 3rd party websites.
+
+@group Bloombox Elements
+@element bloombox-embedded-menu
+@demo demo/index.html
+@homepage bloombox.github.io
+-->
+
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-dialog/paper-dialog.html">
+<link rel="import" href="../paper-dialog-scrollable/paper-dialog-scrollable.html">
+<dom-module id="bloombox-item-dialog" assetpath="/">
+<template strip-whitespace>
+<style is="custom-style">
+:root{}
+:host{}
+</style>
+<template is="dom-if" if="[[selectedItem]]">
+<paper-dialog>
+<h2>Header</h2>
+<paper-dialog-scrollable>
+<b>fart</b>
+</paper-dialog-scrollable>
+<div class="buttons">
+<paper-button dialog-dismiss autofocus>Close</paper-button>
+</div>
+</paper-dialog>
+</template>
+</template>
+<script type="text/javascript" src="bloombox-item-dialog.js"></script></dom-module>
