@@ -1,7 +1,7 @@
 {
   "name": "bloombox-embedded-menu",
   "description": "Provides UI for embeddable web menus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "authors": [
     "Sam Gammon <sam@momentum.io>"
